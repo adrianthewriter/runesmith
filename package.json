@@ -1,7 +1,7 @@
 {
   "name": "swordsmith",
   "description": "A tool for building Roll20 character sheets with React components.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": "bin/swordsmith.js",
   "main": "index.js",
   "author": "Adrian Brooks",
