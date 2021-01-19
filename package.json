@@ -1,9 +1,14 @@
 {
-  "name": "swordsmith",
+  "name": "runesmith",
   "description": "A tool for building Roll20 character sheets with React components.",
   "version": "0.0.5",
-  "bin": "bin/swordsmith.js",
+  "bin": "bin/runesmith.js",
   "author": "Adrian Brooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianthewriter/runesmith.git",
+    "directory": ""
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {
