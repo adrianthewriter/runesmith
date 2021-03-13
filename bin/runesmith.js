@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
-const runCommand = require('yarpm')
+const { sync } = require('cross-spawn')
 
 const [task] = process.argv.slice(2)
 const devConfig = path.resolve(__dirname, '../lib/config/config.dev.js')
@@ -9,23 +9,21 @@ const prodConfig = path.resolve(__dirname, '../lib/config/config.prod.js')
 let result
 switch (task) {
   case 'start': {
-    result = runCommand(
-      [`run`, `webpack`, `serve`, `--config "${devConfig}"`, `--progress`],
+    result = sync(
+      'npx yarn run webpack serve',
+      ['--config', devConfig, '--progress'],
       {
-        stdin: process.stdin,
-        stdout: process.stdout,
-        stderr: process.stderr,
+        stdio: 'inherit',
       }
     )
     break
   }
   case 'build': {
-    result = runCommand(
-      [`run`, `webpack`, `--config "${prodConfig}"`, `--progress`],
+    result = sync(
+      'npx yarn run webpack',
+      ['--config', prodConfig, '--progress'],
       {
-        stdin: process.stdin,
-        stdout: process.stdout,
-        stderr: process.stderr,
+        stdio: 'inherit',
       }
     )
     break
@@ -34,13 +32,9 @@ switch (task) {
     console.log(`Unknown script "${task}".`)
 }
 
-result.then(result => {
-  console.log(result)
-})
+if (result.signal) {
+  console.log('signal:', result.signal)
+  process.exit(1)
+}
 
-// if (result.signal) {
-//   console.log('signal:', result.signal)
-//   process.exit(1)
-// }
-
-// process.exit(result.status)
+process.exit(result.status)
