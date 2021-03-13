@@ -32,9 +32,9 @@ result.then(result => {
   console.log(result)
 })
 
-if (result.signal) {
-  console.log('signal:', result.signal)
-  process.exit(1)
-}
+// if (result.signal) {
+//   console.log('signal:', result.signal)
+//   process.exit(1)
+// }
 
-process.exit(result.status)
+// process.exit(result.status)
