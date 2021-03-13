@@ -28,6 +28,10 @@ switch (task) {
     console.log(`Unknown script "${task}".`)
 }
 
+result.then(result => {
+  console.log(result)
+})
+
 if (result.signal) {
   console.log('signal:', result.signal)
   process.exit(1)
