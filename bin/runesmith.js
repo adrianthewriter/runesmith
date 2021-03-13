@@ -10,7 +10,7 @@ let result
 switch (task) {
   case 'start': {
     result = runCommand(
-      [`run webpack serve --config ${devConfig} --progress`],
+      [`run`, `webpack`, `serve`, `--config "${devConfig}"`, `--progress`],
       {
         stdin: process.stdin,
         stdout: process.stdout,
@@ -20,11 +20,14 @@ switch (task) {
     break
   }
   case 'build': {
-    result = runCommand([`run webpack --config ${prodConfig} --progress`], {
-      stdin: process.stdin,
-      stdout: process.stdout,
-      stderr: process.stderr,
-    })
+    result = runCommand(
+      [`run`, `webpack`, `--config "${prodConfig}"`, `--progress`],
+      {
+        stdin: process.stdin,
+        stdout: process.stdout,
+        stderr: process.stderr,
+      }
+    )
     break
   }
   default:
