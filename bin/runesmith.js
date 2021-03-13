@@ -10,7 +10,7 @@ let result
 switch (task) {
   case 'start': {
     result = sync(
-      'npx yarn run webpack serve',
+      'npx yarn webpack serve',
       ['--config', devConfig, '--progress'],
       {
         stdio: 'inherit',
@@ -19,13 +19,9 @@ switch (task) {
     break
   }
   case 'build': {
-    result = sync(
-      'npx yarn run webpack',
-      ['--config', prodConfig, '--progress'],
-      {
-        stdio: 'inherit',
-      }
-    )
+    result = sync('npx yarn webpack', ['--config', prodConfig, '--progress'], {
+      stdio: 'inherit',
+    })
     break
   }
   default:
