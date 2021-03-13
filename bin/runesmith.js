@@ -9,15 +9,23 @@ const prodConfig = path.resolve(__dirname, '../lib/config/config.prod.js')
 let result
 switch (task) {
   case 'start': {
-    result = sync('npx webpack serve', ['--config', devConfig, '--progress'], {
-      stdio: 'inherit',
-    })
+    result = sync(
+      `node ${path.resolve(__dirname, './node_modules/.bin')}/webpack serve`,
+      ['--config', devConfig, '--progress'],
+      {
+        stdio: 'inherit',
+      }
+    )
     break
   }
   case 'build': {
-    result = sync('npx webpack', ['--config', prodConfig, '--progress'], {
-      stdio: 'inherit',
-    })
+    result = sync(
+      `node ${path.resolve(__dirname, './node_modules/.bin')}/webpack`,
+      ['--config', prodConfig, '--progress'],
+      {
+        stdio: 'inherit',
+      }
+    )
     break
   }
   default:
