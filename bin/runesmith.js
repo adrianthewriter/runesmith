@@ -9,15 +9,18 @@ const prodConfig = path.resolve(__dirname, '../lib/config/config.prod.js')
 let result
 switch (task) {
   case 'start': {
-    result = runCommand(`run webpack serve --config ${devConfig} --progress`, {
-      stdin: process.stdin,
-      stdout: process.stdout,
-      stderr: process.stderr,
-    })
+    result = runCommand(
+      [`run webpack serve --config ${devConfig} --progress`],
+      {
+        stdin: process.stdin,
+        stdout: process.stdout,
+        stderr: process.stderr,
+      }
+    )
     break
   }
   case 'build': {
-    result = runCommand(`run webpack --config ${prodConfig} --progress`, {
+    result = runCommand([`run webpack --config ${prodConfig} --progress`], {
       stdin: process.stdin,
       stdout: process.stdout,
       stderr: process.stderr,
