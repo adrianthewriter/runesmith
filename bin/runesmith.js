@@ -10,7 +10,7 @@ let result
 switch (task) {
   case 'start': {
     result = sync(
-      `node ${path.resolve(__dirname, './node_modules/.bin')}/webpack serve`,
+      `node ../node_modules/.bin/webpack serve`,
       ['--config', devConfig, '--progress'],
       {
         stdio: 'inherit',
@@ -20,7 +20,7 @@ switch (task) {
   }
   case 'build': {
     result = sync(
-      `node ${path.resolve(__dirname, './node_modules/.bin')}/webpack`,
+      `node ../node_modules/.bin/webpack`,
       ['--config', prodConfig, '--progress'],
       {
         stdio: 'inherit',
