@@ -1367,6 +1367,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pmmmwh/react-refresh-webpack-plugin@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.4.3"
+  dependencies:
+    ansi-html: ^0.0.7
+    error-stack-parser: ^2.0.6
+    html-entities: ^1.2.1
+    native-url: ^0.2.6
+    schema-utils: ^2.6.5
+    source-map: ^0.7.3
+  peerDependencies:
+    "@types/webpack": 4.x
+    react-refresh: ">=0.8.3 <0.10.0"
+    sockjs-client: ^1.4.0
+    type-fest: ^0.13.1
+    webpack: ">=4.43.0 <6.0.0"
+    webpack-dev-server: 3.x
+    webpack-hot-middleware: 2.x
+    webpack-plugin-serve: 0.x || 1.x
+  peerDependenciesMeta:
+    "@types/webpack":
+      optional: true
+    sockjs-client:
+      optional: true
+    type-fest:
+      optional: true
+    webpack-dev-server:
+      optional: true
+    webpack-hot-middleware:
+      optional: true
+    webpack-plugin-serve:
+      optional: true
+  checksum: 718853bf7b8a517616e1b136d698fdd600998c667b556982c7f460ba628da7575248f1c75a3b2b8fe0e2a458121c81039038d25ed1c79f4517c783e407417585
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.0":
   version: 3.7.0
   resolution: "@types/eslint-scope@npm:3.7.0"
@@ -1788,7 +1824,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-html@npm:0.0.7":
+"ansi-html@npm:0.0.7, ansi-html@npm:^0.0.7":
   version: 0.0.7
   resolution: "ansi-html@npm:0.0.7"
   bin:
@@ -2707,13 +2743,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"command-exists@npm:^1.2.9":
-  version: 1.2.9
-  resolution: "command-exists@npm:1.2.9"
-  checksum: c682ee2215e20c3e3ea9ebaaec403928f4e927dec75778e798766db9967a842f89ae2318ff3b384706bb22abb22eac983fe53d9ecd54d7b781a8dbed47ed6c6a
-  languageName: node
-  linkType: hard
-
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -3628,6 +3657,15 @@ __metadata:
   dependencies:
     is-arrayish: ^0.2.1
   checksum: 6c6c9187429ae867d145bc64c682c7c137b1f8373a406dc3b605c0d92f15b85bfcea02b461dc55ae11b10d013377e1eaf3d469d2861b2f94703c743620a9c08c
+  languageName: node
+  linkType: hard
+
+"error-stack-parser@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "error-stack-parser@npm:2.0.6"
+  dependencies:
+    stackframe: ^1.1.1
+  checksum: 7abf762c20054310d33f0c0a34a2ea38f93a1b0169f5289feb96cf94d7b30d277a0df09567469be79ccfcfa49df37cddc8c59e0bc5b682a1e7e3c234e67b25c8
   languageName: node
   linkType: hard
 
@@ -4584,7 +4622,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-entities@npm:^1.3.1":
+"html-entities@npm:^1.2.1, html-entities@npm:^1.3.1":
   version: 1.4.0
   resolution: "html-entities@npm:1.4.0"
   checksum: 639b7722433e5f78856f92431a302d2f113a9c2947d684975926801e507dfcf1269fdbf1f719931f478749b5a53a642b0f2c90959cd41af21a633722e9c64422
@@ -4767,6 +4805,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"import-cwd@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "import-cwd@npm:3.0.0"
+  dependencies:
+    import-from: ^3.0.0
+  checksum: 5689cfc5d26336ed9ae15a2c725d881845a2455a75fdd92cf715fa92e13ede901cf95c7bb48aeca9b7612f23d53380ff762defc804403f653eedcf53c37e9e5c
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^2.0.0":
   version: 2.0.0
   resolution: "import-fresh@npm:2.0.0"
@@ -4784,6 +4831,15 @@ fsevents@^1.2.7:
     parent-module: ^1.0.0
     resolve-from: ^4.0.0
   checksum: 3ff624f00140850a2878eb7630d635daaad556cfa5a0e23191e9b65ab4fec8cc23f929f03bc9b3c4251b497a434f459bf3e7a8aa547a400ad140f431a1b0e4d6
+  languageName: node
+  linkType: hard
+
+"import-from@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "import-from@npm:3.0.0"
+  dependencies:
+    resolve-from: ^5.0.0
+  checksum: ba66d42da541286fe50afe800a506534560c067eac7fa1c5fa83b4ea69eb92952adf6bff4ae6a3ea2e45780a874aa0341e4101e6ebc3f9b8fd6b83ac29fafe1b
   languageName: node
   linkType: hard
 
@@ -5842,6 +5898,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"memory-fs@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "memory-fs@npm:0.5.0"
+  dependencies:
+    errno: ^0.1.3
+    readable-stream: ^2.0.1
+  checksum: deb916f33ca09215d6ad58db30854bbf36aaca86e018dcbbbdb7c6160661e8c0b9acdcc23c9931fc6dcd62f3dd5318a7ecab519e3688f7787d0833e5f48c0d0a
+  languageName: node
+  linkType: hard
+
 "merge-descriptors@npm:1.0.1":
   version: 1.0.1
   resolution: "merge-descriptors@npm:1.0.1"
@@ -6122,6 +6188,15 @@ fsevents@^1.2.7:
     snapdragon: ^0.8.1
     to-regex: ^3.0.1
   checksum: 2e1440c5705f0192b9d9b46bb682a1832052974dad359ed473b9f555abb5c55a08b3d5ba45d7d37c53a83f64b7f93866292824d3086a150ff7980e71874feb3b
+  languageName: node
+  linkType: hard
+
+"native-url@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "native-url@npm:0.2.6"
+  dependencies:
+    querystring: ^0.2.0
+  checksum: 064e580759f06060740636184ba8dbd8cf21a1237c769625591f8a0e956714ea27d58d601fe84c4b9600dfabc88edfb3bf51fc7a579764b5d60e0d9392aec9df
   languageName: node
   linkType: hard
 
@@ -7838,6 +7913,13 @@ prerender-loader@nettoolkit/prerender-loader:
   languageName: node
   linkType: hard
 
+"querystring@npm:^0.2.0":
+  version: 0.2.1
+  resolution: "querystring@npm:0.2.1"
+  checksum: 59d27ec60ed6f9cd4d8ddf6413c1b8dc624ff3f148ed085267e714c08d931d3dae987bfd1ecc5d75cf8d6708bc1d081341b8745c4383c0e8525c8eb3125959cd
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -7897,6 +7979,13 @@ prerender-loader@nettoolkit/prerender-loader:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 11bcf1267a314a522615f626f3ce3727a3a24cdbf61c4d452add3550a7875326669631326cfb1ba3e92b6f72244c32ffecf93ad21c0cad8455d3e169d0e3f060
+  languageName: node
+  linkType: hard
+
+"react-refresh@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "react-refresh@npm:0.9.0"
+  checksum: 300dc431389f4c532bdfec08d5bc59b591c8c440486a7d5770c8954adf3afe62501b659c5acbdb7831751e8be506eb90a6f72491fab40352f3b3fba16897acf6
   languageName: node
   linkType: hard
 
@@ -8346,9 +8435,11 @@ prerender-loader@nettoolkit/prerender-loader:
     "@babel/plugin-transform-runtime": ^7.13.10
     "@babel/preset-env": ^7.13.10
     "@babel/preset-react": ^7.12.13
+    "@pmmmwh/react-refresh-webpack-plugin": ^0.4.3
     alias-hq: ^5.1.6
     autoprefixer: ^10.2.5
     babel-loader: ^8.2.2
+    chalk: ^4.1.0
     change-case: ^4.1.2
     copy-webpack-plugin: ^8.0.0
     cross-spawn: ^7.0.3
@@ -8357,6 +8448,10 @@ prerender-loader@nettoolkit/prerender-loader:
     file-loader: ^6.2.0
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.1
+    import-cwd: ^3.0.0
+    import-from: ^3.0.0
+    loader-utils: ^2.0.0
+    memory-fs: ^0.5.0
     mini-css-extract-plugin: ^1.3.9
     postcss: ^8.2.8
     postcss-loader: ^5.1.0
@@ -8367,13 +8462,17 @@ prerender-loader@nettoolkit/prerender-loader:
     prop-types: ^15.7.2
     react: ^17.0.1
     react-dom: ^17.0.1
+    react-refresh: ^0.9.0
     read-pkg: ^5.2.0
     style-loader: ^2.0.0
     terser-webpack-plugin: ^5.1.1
     webpack: ^5.24.4
     webpack-cli: ^4.5.0
     webpack-dev-server: ^3.11.2
-    yarpm: ^1.1.1
+  peerDependencies:
+    prop-types: ^15.7.2
+    react: ^17.0.1
+    react-dom: ^17.0.1
   bin:
     runesmith: bin/runesmith.js
   languageName: unknown
@@ -8818,7 +8917,7 @@ prerender-loader@nettoolkit/prerender-loader:
   languageName: node
   linkType: hard
 
-"source-map@npm:~0.7.2":
+"source-map@npm:^0.7.3, source-map@npm:~0.7.2":
   version: 0.7.3
   resolution: "source-map@npm:0.7.3"
   checksum: 351ce26ffa1ebf203660c0d70d7566c81e65d2d994d1c2d94da140808e02da34961673ce12ecea9b40797b96fbeb8c70bf71a4ad9f779f1a4fdbba75530bb386
@@ -8927,6 +9026,13 @@ prerender-loader@nettoolkit/prerender-loader:
   version: 0.1.8
   resolution: "stable@npm:0.1.8"
   checksum: a430967bb543d4d1a5cbec81b48034006a467464f5d4bdf72bd7279da406956e1f8edaa56aab74ec17cc4e56ee61668dc4f1b380255507cf2f70c6ba589f7c48
+  languageName: node
+  linkType: hard
+
+"stackframe@npm:^1.1.1":
+  version: 1.2.0
+  resolution: "stackframe@npm:1.2.0"
+  checksum: 71e2868a529123e9ca1cf510192a7de879b8d92b5829c7f58d5576e1500cbedf22b5d9cc86589c547b6842abcf01cea13979ab8301b51e85bdb6267a6f9288f2
   languageName: node
   linkType: hard
 
@@ -10168,20 +10274,6 @@ prerender-loader@nettoolkit/prerender-loader:
     y18n: ^4.0.0
     yargs-parser: ^13.1.2
   checksum: 92c612cd14a9217d7421ae4f42bc7c460472633bfc2e45f7f86cd614a61a845670d3bac7c2228c39df7fcecce0b8c12b2af65c785b1f757de974dcf84b5074f9
-  languageName: node
-  linkType: hard
-
-"yarpm@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "yarpm@npm:1.1.1"
-  dependencies:
-    command-exists: ^1.2.9
-    cross-spawn: ^7.0.3
-  bin:
-    yarpm: bin/yarpm.js
-    yarpm-pnpm: bin/yarpm-pnpm.js
-    yarpm-yarn: bin/yarpm-yarn.js
-  checksum: c00596cee54139710f16e7cef7cc7ed4605c2d5dc43db84f20ad414f486d7c05ce8de8cb3f15b94e4a84ab8e0f8389d4d592933a5e9d358372718fc96169a542
   languageName: node
   linkType: hard
 
