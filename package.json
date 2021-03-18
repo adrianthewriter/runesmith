@@ -1,0 +1,10 @@
+{
+  "name": "roll20-runesmith",
+  "version": "0.2.0",
+  "description": "A tool for building Roll20 character sheets with React components.",
+  "main": "lib/index.js",
+  "repository": "https://github.com/adrianthewriter/runesmith.git",
+  "author": "Adrian Brooks",
+  "license": "See LICENSE",
+  "private": false
+}
