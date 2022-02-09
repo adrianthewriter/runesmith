@@ -1,0 +1,28 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "task.autoDetect": "off",
+
+  // Custom statusbar commands
+  "statusbar_command.commands": [
+    {
+      "text": "$(debug-start) Build app",
+      "id": "buildApp",
+      "name": "buildApp",
+      "alignment": "left",
+      "priority": 10,
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["Build app"]
+    },
+    {
+      "text": "$(debug-start) [ᚱ]",
+      "id": "runRunesmith",
+      "name": "runRunesmith",
+      "alignment": "left",
+      "priority": 10,
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["Run runesmith"]
+    }
+  ]
+}

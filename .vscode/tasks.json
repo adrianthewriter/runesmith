@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build app",
+      "type": "shell",
+      "command": "deno install -f --name runesmith ./src/main.ts"
+    },
+    {
+      "label": "Run [ᚱ]",
+      "type": "shell",
+      "command": "runesmith",
+      "args": ["${input:command}"]
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "command",
+      "description": "Which command do you want to use?",
+      "options": ["", "run", "build", "test", "init"],
+      "default": ""
+    }
+  ]
+}
