@@ -6,10 +6,10 @@
     {
       "label": "Build app",
       "type": "shell",
-      "command": "deno install -f --name runesmith ./src/main.ts"
+      "command": "deno install -f --allow-env --name runesmith ./cli.ts"
     },
     {
-      "label": "Run [ᚱ]",
+      "label": "Run runesmith",
       "type": "shell",
       "command": "runesmith",
       "args": ["${input:command}"]
