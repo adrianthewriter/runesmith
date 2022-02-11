@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= it.title %> | Runesmith Dev Server</title>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='initial-scale=1.0, width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta charset="UTF-8">
+
+
+<link href='https://app.roll20.net/assets/base.css' rel='stylesheet' type='text/css'>
+<link href='https://app.roll20.net/assets/app.css' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather|Anton|Nunito|Rye|Kaushan+Script|Goblin+One|Crimson+Text|Montserrat|IM+Fell+DW+Pica|Della+Respira|Patrick+Hand|Contrail+One|Shadows+Into+Light|Candal&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' rel='stylesheet'>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+
+
+    <!-- Runesmith Specific -->
+    <style>
+    #rolls:target #rightsidebar {
+      z-index: 10000000000;
+    }
+    </style>
+    <link rel="stylesheet" href="/styles.bundle.css" type="text/css" />
+    <script defer src="/layout.bundle.js"></script>
+    <!-- /Runesmith Specific -->
+  </head>
+
+  <body id="rolls" class="no-touch">
+    
+
+    <div id="sidebarcontrol">
+      <span class="fonticon-menu"></span>
+    </div>
+<div id="rightsidebar" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-resizable">
+      <ul class="tabmenu ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+<li class="tipme-delayed ui-state-default ui-corner-top ui-tabs-active ui-state-active" id="textchattab" title="Chat" role="tab" tabindex="0" aria-controls="textchat" aria-labelledby="ui-id-1" aria-selected="true">
+<a class="pictos ui-tabs-anchor" href="#textchat" role="presentation" tabindex="-1" id="ui-id-1">q</a>
+</li>
+<li class="tipme-delayed ui-state-default ui-corner-top" id="arttab" title="Art Library" role="tab" tabindex="-1" aria-controls="imagedialog" aria-labelledby="ui-id-2" aria-selected="false">
+<a class="pictos ui-tabs-anchor" href="#imagedialog" role="presentation" tabindex="-1" id="ui-id-2">P</a>
+</li>
+<li class="tipme-delayed ui-state-default ui-corner-top" title="Journal" role="tab" tabindex="-1" aria-controls="journal" aria-labelledby="ui-id-3" aria-selected="false">
+<a class="pictos ui-tabs-anchor" href="#journal" role="presentation" tabindex="-1" id="ui-id-3">N</a>
+</li>
+
+<li class="tipme-delayed ui-state-default ui-corner-top" id="jukeboxtab" title="Jukebox" role="tab" tabindex="-1" aria-controls="jukebox" aria-labelledby="ui-id-5" aria-selected="false">
+<a class="pictostwo ui-tabs-anchor" href="#jukebox" role="presentation" tabindex="-1" id="ui-id-5">u</a>
+</li>
+<li title="Collection" class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="deckstables" aria-labelledby="ui-id-6" aria-selected="false">
+<a class="pictos ui-tabs-anchor" href="#deckstables" role="presentation" tabindex="-1" id="ui-id-6">l</a>
+</li>
+<li class="tipme-delayed ui-state-default ui-corner-top" title="My Settings" role="tab" tabindex="-1" aria-controls="vm_settings_categories" aria-labelledby="ui-id-7" aria-selected="false">
+<a class="pictos ui-tabs-anchor" href="#vm_settings_categories" role="presentation" tabindex="-1" id="ui-id-7">y</a>
+</li>
+</ul>
+<div class="textchatcontainer ui-tabs-panel ui-widget-content ui-corner-bottom withtimestamps" id="textchat" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false" style="height: 494px; display: block;">
+        <div class="chatlogmessage message system">
+          <a href="javascript:void(0);" id="openchatarchive"
+            >View all chat entries for this game &raquo;</a
+          >
+        </div>
+        <div
+          aria-live="polite"
+          class="content"
+          role="log"
+          style="padding-top: 0px !important"
+        >
+        
+          <div class="message system">
+            <div class="spacer"></div>
+            <div class="userscript-commandintro">
+              <img
+                alt="Roll 20"
+                src="https://app.roll20.net/v2/images/roll20-logo.png"
+              />
+              <h1>Chat Tips</h1>
+              <p>
+                Type these chat commands into the text box below then press the
+                <strong>Enter</strong> key.
+              </p>
+              <ul>
+                <li>
+                  Dice Rolls<br /><strong>/roll</strong> 1d20 or
+                  <strong>/r</strong> 1d20<br /><strong>/gmroll</strong>
+                  2d6&gt;5 or <strong>/gr</strong> 2d6&gt;5
+                </li>
+                <li>
+                  Whisper a Player or Character<br /><strong>/w</strong> name
+                  message<br /><strong>/w gm</strong> message
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message system">
+            <div class="spacer"></div>
+            <h1 style="font-size: 1.2em">Roll20 Runesmith</h1>
+            <p>Your custom <strong>character sheet</strong> template is displayed to the left, and your custom roll templates are displayed below.</p>
+          </div>
+
+          <div class="message general you">
+            <div class="spacer"></div>
+            <span class="by"><%= it.title %>:</span>
+          </div>
+
+          <div class="message general you">
+            If you can see this, something when wrong. :(
+          </div>
+          
+          <div class="message general">
+            <div class="spacer"></div>
+            ...
+          </div>
+
+        </div>
+        <div id="whoistyping">
+          <div class="icon pictostwo">y</div>
+          <div class="names"></div>
+        </div>
+      </div>
+      <div id="textchat-input">
+        <div id="textchat-notifier" style="display: none"></div>
+        <textarea
+          contenteditable="true"
+          role="textarea"
+          style="width: 97%"
+          title="Text Chat Input"
+        ></textarea>
+        <div class="clear"></div>
+        <div style="float: left">
+          <label>As:</label>
+          <select class="selectize" id="speakingas"></select>
+        </div>
+        <button class="btn">Send</button>
+      </div>
+      
+      <div id="vm_settings_categories"></div>
+    </div>
+
+   
+
+    <div
+      class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable"
+      tabindex="-1"
+      style="
+        outline: 0px;
+        z-index: 10000;
+        position: relative;
+        max-height: calc(100% - 50px);
+        width: 900px;
+        margin:25px;
+        display: block;
+      "
+      role="dialog"
+      aria-labelledby="ui-id-10"
+    >
+      <div
+        class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"
+      >
+        <span id="ui-id-10" class="ui-dialog-title"
+          >Test Character<button class="broadcastcharacter btn">
+            Show to Players
+          </button>
+          <button class="editcharacter btn">Edit</button
+          ><button class="zoomoptions btn">
+            <span class="pictos">s</span>
+          </button>
+          <div class="zoomoptionsmenu" style="display: none">
+            <button class="zoomin"><span class="pictos">&amp;</span></button
+            ><button class="zoomdisplay">100%</button
+            ><button class="zoomout"><span class="pictos">_</span></button>
+          </div></span
+        ><a
+          href="#"
+          class="ui-dialog-titlebar-close ui-corner-all"
+          role="button"
+          ><span class="ui-icon ui-icon-closethick">close</span></a
+        >
+      </div>
+      <div
+        class="dialog characterdialog ui-dialog-content ui-widget-content"
+        style="display: block; width: auto; min-height: 0px; height: 686px"
+        scrolltop="0"
+        scrollleft="0"
+      >
+      
+      <iframe src="./sheet">
+        <!-- Runesmith: charactersheet renders here -->
+      </iframe>
+
+      <div
+        class="ui-resizable-handle ui-resizable-n"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-e"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-s"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-w"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-sw"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-ne"
+        style="z-index: 1000"
+      ></div>
+      <div
+        class="ui-resizable-handle ui-resizable-nw"
+        style="z-index: 1000"
+      ></div>
+    </div> */ %>
+  </body>
+</html>
