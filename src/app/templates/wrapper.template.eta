@@ -106,7 +106,7 @@
           </div>
 
           <div class="message general you">
-            If you can see this, something when wrong. :(
+            <%~ it.rolls %>
           </div>
           
           <div class="message general">

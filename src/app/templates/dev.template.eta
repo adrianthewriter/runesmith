@@ -63,7 +63,7 @@
               class="charactersheet tab-pane charsheet lang-undefined"
               style="display: block"
             >
-            <%= it.sheet %>
+            <%~ it.sheet %>
           </div>
           </form>
         </div>

@@ -19,3 +19,9 @@ export const paths = {
 
 export const normalizePath = (path: string): string => normalize(path)
 export const getProjectName = (): string => basename(dirname(Deno.cwd()))
+export const getRequestPath = (path: string) => {
+  const url = path
+  const regex = /\/\/.+(\/.*$)/
+  const match = url.match(regex)
+  if (match) return match[1]
+}

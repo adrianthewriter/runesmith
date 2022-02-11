@@ -1,21 +1,9 @@
-import { Drash, React, ReactDOM, ReactDOMServer } from "../deps.ts"
+import { Drash } from "../deps.ts"
 import { getProjectName } from "../utils.ts"
 
-import { RenderHtmlService } from "./renderHtmlService.ts"
+import { RenderHtmlService } from "./renderHtmlService.tsx"
 
-// Create your resource
-
-class SheetResource extends Drash.Resource {
-  public paths = ["/sheet"]
-
-  public GET(_request: Drash.Request, response: Drash.Response): void {
-    const html = response.render("./dev.template.eta", {
-      sheet: "sheet goes here!",
-    }) as string
-
-    response.html(html)
-  }
-}
+// Create the resources
 
 class WrapperResource extends Drash.Resource {
   public paths = ["/"]
@@ -29,7 +17,19 @@ class WrapperResource extends Drash.Resource {
   }
 }
 
-// Create and run your server
+class SheetResource extends Drash.Resource {
+  public paths = ["/sheet"]
+
+  public GET(_request: Drash.Request, response: Drash.Response): void {
+    const html = response.render("./dev.template.eta", {
+      sheet: "sheet goes here!",
+    }) as string
+
+    response.html(html)
+  }
+}
+
+// Create and run the server
 
 const server = new Drash.Server({
   hostname: "localhost",
