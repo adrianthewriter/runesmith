@@ -2,7 +2,7 @@
 
 _Runesmith_ is a tool for generating custom [Roll20](https://roll20.net) character sheets from [React](https://reactjs.org) components. Made using [Deno 🦕](https://deno.land).
 
-It is a work in progress. Use at your own risk 😎
+It is a failed eperiement. Don't us it 😬
 
 ## Usage
 

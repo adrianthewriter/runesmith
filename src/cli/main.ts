@@ -1,13 +1,12 @@
 import { Line } from "../deps.ts"
+import { RunesmithRunCommand } from "./commands/index.ts"
 
 // Create your main command
 
 class RunesmithMainCommand extends Line.MainCommand {
-  public signature = "runesmith [commmand]"
+  public signature = "runesmith"
 
-  public arguments = {
-    command: "",
-  }
+  public subcommands = [RunesmithRunCommand]
 }
 
 // Construct your Line.CLI object and plug in your main command

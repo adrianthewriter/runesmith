@@ -1,5 +1,7 @@
 import { Drash, Eta, React, ReactDOMServer } from "../deps.ts"
 import { paths, normalizePath, getRequestPath } from "../utils.ts"
+import { DefaultSheetLayout, DefaultRollTemplates } from "../lib/index.ts"
+// import { SheetLayout, RollTemplates } from "app/index.js"
 
 interface IOptions {
   views_path?: string
@@ -26,20 +28,12 @@ export class RenderHtmlService extends Drash.Service {
     this.#views_path =
       options?.views_path || `${paths.rs_path}/src/app/templates`
 
-    const DefaultSheetLayout = () => (
-      <span>Your sheet layout will go here.</span>
-    )
-    const DefaultRollTemplates = () => (
-      <span>Your roll templates will go here.</span>
-    )
     this.SheetLayout = () => {
-      const OptSheetLayout = this.#options?.sheetlayout_component
-      if (OptSheetLayout) return <OptSheetLayout />
+      // if (SheetLayout) return <SheetLayout />
       return <DefaultSheetLayout />
     }
     this.RollTemplates = () => {
-      const OptRollTemplates = this.#options?.rolltemplates_component
-      if (OptRollTemplates) return <OptRollTemplates />
+      // if (RollTemplates) return <RollTemplates />
       return <DefaultRollTemplates />
     }
   }
@@ -61,12 +55,12 @@ export class RenderHtmlService extends Drash.Service {
 
       // If this is the inner frame, add the <sheetlayout/> to data
       if (requestPath === "/sheet") {
-        data.sheet = ReactDOMServer.renderToStaticMarkup(<this.SheetLayout />)
+        data.sheet = ReactDOMServer.renderToString(<this.SheetLayout />)
       }
 
       // Otherwise, add the <rolltemplates/> to data
       else if (requestPath === "/") {
-        data.rolls = ReactDOMServer.renderToStaticMarkup(<this.RollTemplates />)
+        data.rolls = ReactDOMServer.renderToString(<this.RollTemplates />)
       }
 
       // Render html from template

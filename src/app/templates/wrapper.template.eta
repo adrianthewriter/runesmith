@@ -23,7 +23,8 @@
     }
     </style>
     <link rel="stylesheet" href="/styles.bundle.css" type="text/css" />
-    <script defer src="/layout.bundle.js"></script>
+    <script defer src="/rs-client.js"></script>
+    <script defer ser="/livereload/client.js" defer></script>
     <!-- /Runesmith Specific -->
   </head>
 

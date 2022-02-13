@@ -6,7 +6,12 @@
     {
       "label": "Build app",
       "type": "shell",
-      "command": "deno install -f --allow-env --name runesmith ./cli.ts"
+      "command": "deno install -f --allow-all --unstable --no-check --name runesmith ./cli.ts"
+    },
+    {
+      "label": "Build app --reload",
+      "type": "shell",
+      "command": "deno install -f --allow-all --unstable --no-check --name runesmith --reload ./cli.ts"
     },
     {
       "label": "Run runesmith",
