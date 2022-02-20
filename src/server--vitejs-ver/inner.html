@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://app.roll20.net/css/themes/bootstrap/jquery-ui-1.8.16.custom.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://app.roll20.net/assets/base.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://app.roll20.net/css/charsheet.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Patrick+Hand|Contrail+One|Shadows+Into+Light|Candal&amp;subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body style="cursor: auto">
+    <div
+      id="dialog-window"
+      class="ui-dialog"
+      aria-live="polite"
+      aria-relevant="all"
+    >
+      <div
+        class="dialog largedialog characterviewer"
+        style="display: block; max-width: 851px"
+      >
+        <ul class="nav nav-tabs">
+          <li class="">
+            <a href="javascript:void(0);" data-tab="bioinfo"> Bio &amp; Info</a>
+          </li>
+
+          <li class="active">
+            <a href="javascript:void(0);" data-tab="charsheet"
+              >Character Sheet</a
+            >
+          </li>
+          <li style="display: none">
+            <a href="javascript:void(0);" data-tab="charmancer"
+              >Charactermancer</a
+            >
+          </li>
+
+          <li class="">
+            <a href="javascript:void(0);" data-tab="attributesabilities"
+              >Attributes &amp; Abilities</a
+            >
+          </li>
+        </ul>
+        <div id="tab-content" class="tab-content">
+          <form class="sheetform" autocomplete="off">
+            <div
+              class="charactersheet tab-pane charsheet lang-undefined"
+              style="display: block"
+            >
+              <!--sheet-layout-->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="background"></div>
+  </body>
+</html>

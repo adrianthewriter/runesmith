@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import Runesmith from "../src/cli/cli.js";
-Runesmith.run();
+import { cli } from "../src/main.js"
+cli.run()

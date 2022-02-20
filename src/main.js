@@ -1,4 +1,2 @@
-#!/usr/bin/env ./node_modules/.bin/babel-node
-
-import Runesmith from "../src/cli/cli.js"
-Runesmith.run()
+export * as utils from "./utils.js"
+export { default as cli } from "./cli/cli.js"

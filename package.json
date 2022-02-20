@@ -2,53 +2,25 @@
   "name": "runesmith",
   "private": true,
   "version": "0.2.0",
-  "bin": "/bin/runesmith.js",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "rs": "node bin/runesmith.js"
+  "workspaces": [
+    "./examples/*"
+  ],
+  "bin": {
+    "runesmith": "./bin/runesmith.js"
   },
+  "type": "module",
   "dependencies": {
-    "@node-loader/babel": "^2.0.1",
     "@vitejs/plugin-react": "^1.0.7",
     "chalk": "^5.0.0",
-    "node-cli": "^0.2.5",
+    "change-case-all": "^1.0.14",
+    "cosmiconfig": "^7.0.1",
+    "esbuild": "^0.14.23",
     "ora": "^6.0.1",
     "prompts": "^2.4.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-frame-component": "^5.2.1",
     "terminal-link": "^3.0.0",
     "vite": "^2.8.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.17.0",
-    "@babel/core": "^7.17.2",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-plugin-shebang": "^1.0.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": false,
-          "targets": {
-            "node": true
-          }
-        }
-      ],
-      [
-        "@babel/preset-react",
-        {
-          "runtime": "automatic"
-        }
-      ]
-    ],
-    "plugins": [
-      "shebang"
-    ]
   }
 }
