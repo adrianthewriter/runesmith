@@ -1,0 +1,10 @@
+{
+  "name": "runesmith-basic-example",
+  "private": true,
+  "scripts": {
+    "start": "runesmith dev"
+  },
+  "devDependencies": {
+    "runesmith": "file:../.."
+  }
+}
